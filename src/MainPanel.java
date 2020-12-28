@@ -139,7 +139,7 @@ public class MainPanel extends JPanel {
             }
         };
 
-        for (int i = 0; i < buttons.length; i++) {
+       for (int i = 0; i < buttons.length; i++) {
             JButton button = new JButton(" ");
             buttons[i] = button;
             button.addActionListener(stroke);
@@ -156,6 +156,7 @@ public class MainPanel extends JPanel {
             }
         });
         add(button, BorderLayout.SOUTH);
+        
     }
 
     public void pause() {
@@ -174,5 +175,9 @@ public class MainPanel extends JPanel {
         for(int i = 0; i < buttons.length; i ++){
             buttons[i].setText(" ");
         }
+    }
+
+    public int getLength() {
+        return buttons.length;
     }
 }
