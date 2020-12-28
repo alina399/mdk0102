@@ -1,0 +1,18 @@
+import org.junit.*;
+import org.junit.rules.ExpectedException;
+
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.*;
+
+public class UnitTests {
+
+    MainPanel mainPanel = new MainPanel();
+
+    @Test
+    public void testWin() throws Exception {
+        for(int i = 0; i < mainPanel.buttons.length; i ++) {
+            mainPanel.buttons[i].setText("X");
+        }
+        assertEquals(mainPanel.full_field, true);
+    }
+}
